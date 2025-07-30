@@ -20,7 +20,7 @@ class Presensi extends Component
         $attendance = Attendance::where('user_id', Auth::user()->id)
                             ->whereDate('created_at', date('Y-m-d'))->first();
         
-        return view('livewire.presensi', [
+        return view('livewire.Presensi', [
             'schedule' => $schedule,
             'insideRadius' => $this->insideRadius,
             'attendance' => $attendance
