@@ -6,7 +6,7 @@ use App\Livewire\presensi;
 use Maatwebsite\Excel\Facades\Excel;
 
 Route::group(['middleware' => 'auth'], function() {
-    Route::get('presensi', presensi::class)->name('presensi');
+    Route::get('Presensi', presensi::class)->name('Presensi');
     Route::get('attendance/export',function() {
         return Excel::download(new AttendanceExport,'attendances.xlsx');
     })->name('attendance-export');
